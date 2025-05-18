@@ -40,7 +40,7 @@ console.log('Correlation:', pearsonR(steps, calories));
 
 | Feature | API |
 |---------|-----|
-| JSON/CSV/SQLite loaders | `loadEventsFrom*` |
+| JSON/CSV loaders | `loadEventsFrom*` |
 | Event validation against JSON Schemas | `validateEvent` |
 | Time-series transform | `toTimeSeries` |
 | Bucket & aggregate | `groupByBucket` |

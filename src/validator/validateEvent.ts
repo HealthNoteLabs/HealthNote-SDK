@@ -1,4 +1,4 @@
-import Ajv, { ValidateFunction } from 'ajv';
+import Ajv, { ValidateFunction, ErrorObject } from 'ajv';
 import path from 'path';
 import { readFileSync, existsSync } from 'fs';
 import { NostrEvent } from '../types.js';
@@ -22,7 +22,7 @@ function loadSchemaForKind(kind: number): ValidateFunction | null {
 
 export interface ValidationResult {
   valid: boolean;
-  errors?: Ajv.ErrorObject[] | null;
+  errors?: ErrorObject[] | null;
 }
 
 export function validateEvent(ev: NostrEvent): ValidationResult {
